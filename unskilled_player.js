@@ -8,8 +8,6 @@ function solution(participant, completion) {
       return participant[i];
     }
   }
-
-  return "hi";
 }
 
 solution(["leo", "kiki", "eden"], ["eden", "kiki"]);
