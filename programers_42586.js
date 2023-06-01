@@ -17,7 +17,6 @@
   ## 풀이
   1. progress[i] + speeds[i] = distribution[i]
  */
-
 function Deploy(array) {
   let count = 0;
 
@@ -28,21 +27,23 @@ function Deploy(array) {
   }
   return count;
 }
-
 function solution(progresses, speeds) {
   let answer = [];
   let featureCompletion = new Array(progresses.length).fill(0); // 기능 진행도 저장 배열
+  // let count = 0;
 
   while (progresses) {
     for (let i = 0; i < progresses.length; i++) {
       progresses[i] = progresses[i] + speeds[i];
       if (progresses[i] >= 100) {
         featureCompletion[i] = 1;
+        // count++;
       }
     }
 
     let count = Deploy(featureCompletion);
     if (count !== 0) {
+      console.log(featureCompletion);
       answer.push(count);
 
       // 기능완성되면 버리기
@@ -52,14 +53,41 @@ function solution(progresses, speeds) {
     }
 
     if (featureCompletion.length === 0) {
+      // if (progresses.length === 0) {
       break;
     }
   }
   return answer;
 }
 
+// function solution(progresses, speeds) {
+//   var answer = [];
+//   let day = 0;
+//   let amount = 1;
+
+//   progresses
+//     .map((v, i) => Math.ceil((100 - v) / speeds[i]))
+//     .forEach((v, i, array) => {
+//       if (day === 0) {
+//         console.log(`v => ${v}`);
+//         day = v;
+//       }
+//       console.log(`array[i + 1] => ${array[i + 1]}`);
+//       if (day >= array[i + 1]) {
+//         amount++;
+//       } else {
+//         answer.push(amount);
+//         day = array[i + 1];
+//         amount = 1;
+//       }
+//     });
+//   return answer;
+// }
+
 console.log(solution([79, 90, 99, 79, 80, 99], [1, 1, 1, 1, 1, 1])); // 기대값 : [6]
+console.log("================");
 console.log(solution([93, 30, 55], [1, 30, 5])); // 기대값 : [2, 1]
+console.log("================");
 console.log(solution([95, 90, 99, 99, 80, 99], [1, 1, 1, 1, 1, 1])); // 기대값 : [1, 3, 2]
 
 /*
