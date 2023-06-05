@@ -20,15 +20,8 @@
  */
 
 function solution(num, n) {
-  for (let i = 0; i < num; i++) {
-    if (i * n === num) {
-      return 1;
-    }
-  }
-  return 0;
+  return num%n === 0 ? 1 : 0
 }
 
-// 다른사람의 풀이
-function solution(num, n) {
-  return num % n === 0 ? 1 : 0;
-}
+console.log(solution(98,2))
+console.log(solution(32,3))
