@@ -3,11 +3,11 @@
  */
 
 function solution(list) {
-  for(let i = 0; i < list.length; i++){
-    if(list[i] < 0) return i
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] < 0) return i;
   }
-  return -1
+  return -1;
 }
 
-console.log(solution([12, 4, 15, 46, 38, -2, 15]))
-console.log(solution([13, 22, 53, 24, 15, 6]))
+console.log(solution([12, 4, 15, 46, 38, -2, 15]));
+console.log(solution([13, 22, 53, 24, 15, 6]));

@@ -10,8 +10,8 @@
  */
 function solution(string, n) {
   // return string.substring(0,n)
-  return string.slice(-n)
+  return string.slice(-n);
 }
 
-console.log(solution('ProgrammerS123',11))
-console.log(solution('He110W0r1d',5))
+console.log(solution("ProgrammerS123", 11));
+console.log(solution("He110W0r1d", 5));

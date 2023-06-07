@@ -1,5 +1,5 @@
-function solution(string){
-  return string.toLowerCase()
+function solution(string) {
+  return string.toLowerCase();
 }
 
-console.log(solution('TEST'))
+console.log(solution("TEST"));

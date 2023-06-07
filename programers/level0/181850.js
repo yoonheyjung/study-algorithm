@@ -3,8 +3,8 @@
  */
 
 function solution(flo) {
-  return Number.parseInt(flo)
+  return Number.parseInt(flo);
 }
 
-console.log(solution(1.43))
-console.log(solution(98.12))
+console.log(solution(1.43));
+console.log(solution(98.12));
